@@ -1,0 +1,6 @@
+<ul [ngStyle]="{'padding': '0'}" >
+    <li *ngFor="let todo of todos" [ngStyle]="{'margin': '20px 0'}"  >
+        <span [ngStyle]="{'padding': '10px'}" [ngClass]="todo.done ? 'done' : 'undone'" (click)="finishTodo(todo.id)">{{todo.description}}</span> 
+        <input [ngStyle]="{'margin-left': '20px'}" type="button" (click)="excluirTodo(todo.id)" value="X">
+    </li>
+</ul>
